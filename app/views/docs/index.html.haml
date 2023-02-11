@@ -1,10 +1,10 @@
 .wrapper_with_padding
     #docs.clearfix
-        - unless @doc.blank?
+        - unless @docs.blank?
             - @docs.each do |doc| 
                 @a{ href: (url_for [doc])}
                 .doc
-                    %p.title=doc.title
+                    %p.title= doc.title
                     %p.date= time_ago_in_words(doc.created_at)
                     %p.content= truncate(doc.content, length:50)
         - else
