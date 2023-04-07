@@ -35,7 +35,7 @@ class DocsController < ApplicationController
 
     def destroy
         @doc.destroy
-        redirect_to docs_path
+        redirect_to docs_path, status: :see_other
     end
 
     private
